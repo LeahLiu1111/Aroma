@@ -13,10 +13,9 @@
   <title>Leah Liu</title>
 
   <style>
-    .effect-oscar .img-responsive{
-        width:100%;
+    .effect-oscar .img-responsive {
+      width: 100%;
     }
-    
   </style>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -99,18 +98,18 @@
       <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 grid">
         <ul>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-2.jpg" alt=""
-              class="img-responsive" />
-            <figcaption>
-              <h2></h2>
-              <p>Single-instrument Quintet </p>
-              <a href="works-details.html?code=b">View more</a>
-            </figcaption>
-          </figure>
+            <figure class="effect-oscar">
+              <img src="images/home-images/image-2.jpg" alt="" class="img-responsive" />
+              <figcaption>
+                <h2></h2>
+                <p>Do you know what are you laughing at? </p>
+                <a href="works-details.html?code=d">View more</a>
+              </figcaption>
+            </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-3.jpg" alt=""
-                class="img-responsive" />
+            <figure class="effect-oscar">
+              <img src="images/home-images/image-3.jpg" alt="" class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Single-instrument Quintet </p>
@@ -119,8 +118,8 @@
             </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-4.gif" alt=""
-                class="img-responsive" />
+            <figure class="effect-oscar">
+              <img src="images/home-images/image-4.gif" alt="" class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Fish Recipe</p>
@@ -129,8 +128,8 @@
             </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-5.jpg" alt=""
-                class="img-responsive" />
+            <figure class="effect-oscar">
+              <img src="images/home-images/image-5.jpg" alt="" class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Eyesight Hidden in Beijing </p>
@@ -139,8 +138,8 @@
             </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-6.jpg" alt=""
-                class="img-responsive" />
+            <figure class="effect-oscar">
+              <img src="images/home-images/image-6.jpg" alt="" class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Owner Controlled Horse Mask</p>
@@ -149,8 +148,8 @@
             </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-7.jpg" alt=""
-                class="img-responsive" />
+            <figure class="effect-oscar">
+              <img src="images/home-images/image-7.jpg" alt="" class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Trash Funeral</p>
@@ -197,9 +196,18 @@
   <script src="js/effects/AnimOnScroll.js" type="text/javascript"></script>
   <script src="js/effects/modernizr.custom.js"></script>
   <script src="js/html5shiv.js" type="text/javascript"></script> -->
+  <script src="js/jquery.lazyload.min.js">
+
+  </script>
   <script>
     $(function () {
-      $("img.lazy").lazyload({ effect: "fadeIn" });
+      $("img.lazy").lazyload({
+        placeholder: "images/home-images/load.gif", //用图片提前占位
+        // placeholder,值为某一图片路径.此图片用来占据将要加载的图片的位置,待图片加载时,占位图则会隐藏
+        effect: "fadeIn", // 载入使用何种效果
+        failurelimit: 2 // 图片排序混乱时
+        // failurelimit,值为数字.lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况,failurelimit意在加载N张可见区域外的图片,以避免出现这个问题.
+      });
     });
     function toPath(item) {
       window.location.href = './work.html' + '?code=' + item;
