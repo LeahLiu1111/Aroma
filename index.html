@@ -11,6 +11,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Leah Liu</title>
+
+  <style>
+    .effect-oscar .img-responsive{
+        width:100%;
+    }
+    
+  </style>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
   <!-- style -->
@@ -79,7 +86,8 @@
   <main role="main-home-wrapper" class="container main_box_mar">
     <div class="row">
       <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 grid">
-        <figure class="effect-oscar"> <img src="images/home-images/image-1.jpg" alt="" />
+        <figure class="effect-oscar">
+          <img src="images/home-images/image-1.jpg" alt="" />
           <figcaption>
             <h2></h2>
             <p>Self-portrait</p>
@@ -91,17 +99,18 @@
       <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 grid">
         <ul>
           <li>
-            <figure class="effect-oscar"> 
-              <img src="images/home-images/image-2.jpg" alt="" class="img-responsive" />
-              <figcaption>
-                <h2></h2>
-                <p>Do You Know What You're Laughing At? </p>
-                <a href="works-details.html?code=d">View more</a>
-              </figcaption>
-            </figure>
+            <figure class="effect-oscar"> <img src="images/home-images/image-2.jpg" alt=""
+              class="img-responsive" />
+            <figcaption>
+              <h2></h2>
+              <p>Single-instrument Quintet </p>
+              <a href="works-details.html?code=b">View more</a>
+            </figcaption>
+          </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-3.jpg" alt="" class="img-responsive" />
+            <figure class="effect-oscar"> <img src="images/home-images/image-3.jpg" alt=""
+                class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Single-instrument Quintet </p>
@@ -110,7 +119,8 @@
             </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-4.gif" alt="" class="img-responsive" />
+            <figure class="effect-oscar"> <img src="images/home-images/image-4.gif" alt=""
+                class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Fish Recipe</p>
@@ -119,7 +129,8 @@
             </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-5.jpg" alt="" class="img-responsive" />
+            <figure class="effect-oscar"> <img src="images/home-images/image-5.jpg" alt=""
+                class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Eyesight Hidden in Beijing </p>
@@ -128,7 +139,8 @@
             </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-6.jpg" alt="" class="img-responsive" />
+            <figure class="effect-oscar"> <img src="images/home-images/image-6.jpg" alt=""
+                class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Owner Controlled Horse Mask</p>
@@ -137,7 +149,8 @@
             </figure>
           </li>
           <li>
-            <figure class="effect-oscar"> <img src="images/home-images/image-7.jpg" alt="" class="img-responsive" />
+            <figure class="effect-oscar"> <img src="images/home-images/image-7.jpg" alt=""
+                class="img-responsive" />
               <figcaption>
                 <h2></h2>
                 <p>Trash Funeral</p>
@@ -175,7 +188,7 @@
   </footer>
 
   <script src="js/jquery.min.js" type="text/javascript"></script>
-  <script src="js/nav.js" type="text/javascript"></script>
+  <!-- <script src="js/nav.js" type="text/javascript"></script>
   <script src="js/custom.js" type="text/javascript"></script>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <script src="js/effects/masonry.pkgd.min.js" type="text/javascript"></script>
@@ -183,18 +196,15 @@
   <script src="js/effects/classie.js" type="text/javascript"></script>
   <script src="js/effects/AnimOnScroll.js" type="text/javascript"></script>
   <script src="js/effects/modernizr.custom.js"></script>
-  <script src="js/html5shiv.js" type="text/javascript"></script>
+  <script src="js/html5shiv.js" type="text/javascript"></script> -->
   <script>
-    function toPath(item){
-        window.location.href='./work.html' + '?code=' + item;
+    $(function () {
+      $("img.lazy").lazyload({ effect: "fadeIn" });
+    });
+    function toPath(item) {
+      window.location.href = './work.html' + '?code=' + item;
     }
   </script>
 </body>
-1. Self-portrait 
-2. Do You Know What You're Laughing At? 
-3. Single-instrument Quintet 
-4. Fish Recipe 
-5. Eyesight Hidden in Beijing 
-6. Owner Controlled Horse Mask
-7. Trash Funeral
+
 </html>

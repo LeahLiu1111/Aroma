@@ -105,18 +105,19 @@ figure.effect-oscar img {
 }
 figure.effect-oscar figcaption {
 	padding: 4em;
-	background-color: rgba(58,52,42,0);
+	background-color: rgba(255,255,255,0);
 	-webkit-transition: background-color 0.35s;
 	transition: background-color 0.35s;
 }
 figure.effect-oscar figcaption::before {
 	position: absolute;
-	top: 30px;
-	right: 30px;
-	bottom: 30px;
-	left: 30px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
 	border: 1px solid #fff;
-	content: '';
+  content: '';
+  background-color: rgba(255,255,255,0.5);
 }
 figure.effect-oscar h2 {
 	font-weight: 400;
@@ -137,7 +138,8 @@ figure.effect-oscar figcaption::before,  figure.effect-oscar p {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: scale(0);
-	transform: scale(0);
+  transform: scale(0);
+  color: #323232;
 }
 figure.effect-oscar:hover h2 {
 	-webkit-transform: translate3d(0, 0, 0);
@@ -147,13 +149,13 @@ figure.effect-oscar:hover figcaption::before,  figure.effect-oscar:hover p {
 	/* opacity: 1; */
 	/* -webkit-transform: scale(1);
   transform: scale(1); */
-  animation: bounceInLeft 1s 1 cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+  animation: bounceInLeft 2s 1  forwards;
 }
 figure.effect-oscar:hover figcaption {
-	background-color: rgba(58,52,42,0);
+	/* background-color: rgba(0,0,0,0) */
 }
 figure.effect-oscar:hover img {
-	opacity: 0.4;
+  /* opacity: 0.4; */
 }
 
 
@@ -197,21 +199,10 @@ figure.effect-oscar p {
 @keyframes bounceInLeft {
   0% {
     opacity: 0;
-    transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
   }
 
-  60% {
-    opacity: 0.9;
-    transform: translate3d(25px, 0, 0);
-  }
 
-  75% {
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  90% {
-    transform: translate3d(5px, 0, 0);
-  }
 
   100% {
     opacity: 1;
