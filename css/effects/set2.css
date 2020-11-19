@@ -54,7 +54,7 @@
 /* For some effects it will show as a button */
 
 .grid figure figcaption > a {
-	z-index: 1000;
+	z-index: 2;
 	text-indent: 200%;
 	white-space: nowrap;
 	font-size: 0;
@@ -299,8 +299,14 @@ figure.effect-oscar p {
     display: none;
   }
   header[role="header"]{
-    z-index: 99999999999999;
+    z-index: 99999999999999999;
   }
+  /* header[role="header"]  nav #menu-button{
+    z-index: 999999999999999999;
+  }
+  header[role="header"] nav ul{
+    z-index: 99999999999999;
+  } */
   header[role="header"] a{
     color: #303030;
   }
